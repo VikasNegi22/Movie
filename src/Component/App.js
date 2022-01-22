@@ -3,6 +3,7 @@ import movies from "../reducers";
 import { data } from '../data'
 import MovieCard from "./MovieCard";
 import Navbar from "./Navbar";
+import {addMovies} from '../action'
 
 
 class App extends React.Component {
@@ -12,15 +13,13 @@ class App extends React.Component {
       console.log('updated');
       this.forceUpdate();
     })
-    store.dispatch({
-      type: 'ADD_MOVIES',
-      movies: data
-    })
+    store.dispatch(addMovies(data));
+
     console.log('After State ',this.props.store.getState());
   }
 
   render() {
-    const movies = this.props.store.getState();
+    const {list} = this.props.store.getState();
     console.log('render');
     return (
       <div className="App">
@@ -32,7 +31,7 @@ class App extends React.Component {
           </div>
           <div className="list">
             {
-              movies.map((movie) => {
+              list.map((movie) => {
                 return (
                   <MovieCard movie={movie}
                     key={movie.imdbID}
