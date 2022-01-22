@@ -6,11 +6,18 @@ import './Index.css';
 import movies from './reducers';
 
 const store =createStore(movies);
-console.log('state ',store.getState());
+// console.log('Before State ',store.getState());
+
+// store.dispatch({
+//   type:'ADD_MOVIES',
+//   movies:[{name:'Bhaubali'},{name:'Mahabhart'}]
+// });
+
+// console.log('After State ',store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <App store={store}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
