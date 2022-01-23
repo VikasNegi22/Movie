@@ -216,9 +216,6 @@
    padding: 30px 60px;
   }
 
-  .tabs{
-    /* border: 2px solid blue; */
-   }
   
   .tabs button{
   margin: 0px 8px;
@@ -260,12 +257,12 @@
   display: flex;
   bottom: 5px;
 }
-.footer button{
+/* .footer button{
    position: absolute;
    right: 0;
    background-color: black;
    color: white;
-}
+} */
 
 .footer button:hover{
   background-color: white;
@@ -274,4 +271,28 @@
 
 .imdbRating{
   font-family:'Baloo Bhaina 2', cursive;
+}
+
+.UnFavourite{
+  position: absolute;
+  right: 0;
+  background-color: red;
+  color: white;
+}
+
+.Favourite{
+  position: absolute;
+  right: 0;
+  background-color: blue;
+  color: white;
+}
+.active-tabs {
+  background: #2185d0 !important;
+  color: white;
+}
+
+.no-movies {
+  padding: 20px 0;
+  font-size: 20px;
+  color: #6d6d6d;
 }
