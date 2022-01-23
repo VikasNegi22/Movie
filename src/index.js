@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import App from './Component/App';
 import './Index.css';
-import movies from './reducers';
+import rootReducer from './reducers';
 
-const store =createStore(movies);
+
+const store =createStore(rootReducer);
 // console.log('Before State ',store.getState());
 
 // store.dispatch({
