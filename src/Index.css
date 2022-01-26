@@ -270,7 +270,26 @@
 }
 
 .imdbRating{
+  position: relative;
   font-family:'Baloo Bhaina 2', cursive;
+}
+
+.imdbRating .imdbRatingText{
+  visibility: hidden;
+
+  border-radius: 4px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  margin:8px 0px 0px 3px;
+  background-color:black;
+  color: #fff;
+  position: absolute;
+  opacity: 0.7;
+}
+
+.imdbRating:hover .imdbRatingText{
+  visibility: visible;
 }
 
 .UnFavourite{
