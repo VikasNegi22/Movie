@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { data as MoviesList  } from '../data'
 import MovieCard from "./MovieCard";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import { addMovies, setShowFavourites } from '../action';
 
 
